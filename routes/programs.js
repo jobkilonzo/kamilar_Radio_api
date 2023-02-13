@@ -29,9 +29,24 @@ router.post("/", async (req, res) => {
     }
 })
 // Updating one
-router.patch("/:id", getProgram, (reg, res) => {
-    if(eq.body.name != null){
-        res.program.name = req.body.name
+router.patch("/:id", getProgram, async (reg, res) => {
+    if(eq.body.title != null){
+        res.program.title = req.body.title
+    }
+    if(eq.body.day != null){
+        res.program.day = req.body.day
+    }
+    if(eq.body.startTime != null){
+        res.program.startTime = req.body.startTime
+    }
+    if(eq.body.endTime != null){
+        res.program.endTime = req.body.endTime
+    }
+    try {
+        const updatedProgram = await res.program.save()
+        res.json(updatedProgram)
+    } catch(err) {
+    res.status(400).json({message: err.message})
     }
 })
 // Deleting one
