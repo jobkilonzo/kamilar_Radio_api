@@ -1,0 +1,8 @@
+POST http://localhost:3000/programs
+Content-Type: application/json
+{
+    "title": "Tila Kilomo na Kamulah", 
+    "day": "Monday to Fri",
+    "startTime": "6PM",
+    "endTime": "9PM"
+}
