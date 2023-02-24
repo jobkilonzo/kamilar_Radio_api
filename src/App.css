@@ -12,6 +12,16 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.navbar navbar-expand navbar-dark bg-dark{
+  background-color: #e40505;
+}
+button{
+  margin: 10px;
+}
+.bg-dark, button {
+  --bs-bg-opacity: 1;
+  background-color: #e40505!important;
+}
 
 .App-header {
   background-color: #282c34;
