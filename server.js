@@ -5,7 +5,6 @@ const app = express()
 const mongoose = require("mongoose")
 const PORT  = process.env.PORT || 3001
 
-
 mongoose.connect(process.env.DATABASE_URL)
 mongoose.set('strictQuery', true)
 const db = mongoose.connection
