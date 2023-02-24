@@ -4,7 +4,9 @@ const programRouter = require("./routes/programs")
 const app = express()
 const mongoose = require("mongoose")
 const PORT  = process.env.PORT || 3001
-
+var cors = require('cors')
+ 
+app.use(cors())
 mongoose.connect(process.env.DATABASE_URL)
 mongoose.set('strictQuery', true)
 const db = mongoose.connection
